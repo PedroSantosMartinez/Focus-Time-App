@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Card, CardContent, CardHeader, CardTitle } from "../../app/components/ui/Card"; // Import the Card, CardContent, CardHeader, and CardTitle components from the ui folder
 
 const TimerDisplay = () => {
   const [time, setTime] = useState(1500); // The initial value (useState) is 0, time is the state variable (0), and setTime is the function to update the state variable.
@@ -33,10 +34,18 @@ const TimerDisplay = () => {
 
   // Render the timer display
   return (
-    <div>
-      <h1>Timer Display</h1>
-      <h2>Time remaining: {formatTime(time)} </h2>
-    </div>
+    //<div>
+    //  <h1>Timer Display</h1>
+    //  <h2>Time remaining: {formatTime(time)} </h2>
+   // </div>
+    <Card className="w-80 mx-auto mt-10"> {/* The Card component is used to style the timer display */}
+      <CardHeader>
+        <CardTitle>Timer Display</CardTitle> {/* The CardTitle component is used to style the title of the timer display */}
+      </CardHeader>
+      <CardContent>
+        <h2 className="text-2xl">Time remaining: {formatTime(time)}</h2> {/* The formatTime function is used to display the time in MM:SS format */}
+   </CardContent>
+ </Card>
   );
 };
 
