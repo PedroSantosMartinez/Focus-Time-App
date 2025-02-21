@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "../../app/components/ui/Card"; // Import the Card, CardContent, CardHeader, and CardTitle components from the ui folder
+import { Card, CardContent, CardHeader, CardTitle } from "./common/Card"; // Import the Card, CardContent, CardHeader, and CardTitle components from the ui folder
 import TimerControl from "./TimerControl"; // Import the TimerControl component
 
 const TimerDisplay = () => {

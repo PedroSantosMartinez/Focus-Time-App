@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "../../app/components/ui/Button"; // Import the Button component from the ui folder
+import { Button } from "./common/Button"; // Import the Button component from the ui folder
 
 const TimerControl = ({ onStart, onReset, sessionDuration }) => {
     const [isRunning, setIsRunning] = useState(false); // Keep track if the timer is running or not
@@ -21,7 +21,7 @@ const TimerControl = ({ onStart, onReset, sessionDuration }) => {
             {/* Start/Pause button */}
             <Button
                 onClick={handleStartTimer}
-                className="mr-2"
+                className="mr-2 text-black"
             >
                 {isRunning ? "Pause Focus Session" : "Start Focus Session"} {/* Change the button text based on the isRunning state */}
             </Button>
@@ -30,7 +30,7 @@ const TimerControl = ({ onStart, onReset, sessionDuration }) => {
             <Button
                 variant="outlined"
                 onClick={onReset}   
-                className="text-white"
+                className="text-black"
             >
                 Reset
             </Button>
