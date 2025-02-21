@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Button } from "./common/Button"; // Import the Button component from the ui folder
+import { Button } from "../common/Button"; // Import the Button component from the ui folder
 
 const TimerControl = ({ onStart, onReset, sessionDuration }) => {
     const [isRunning, setIsRunning] = useState(false); // Keep track if the timer is running or not
