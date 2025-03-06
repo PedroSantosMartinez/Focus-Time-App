@@ -1,10 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext} from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../common/Card"; // Import the Card, CardContent, CardHeader, and CardTitle components from the ui folder
 import TimerControl from "./TimerControl"; // Import the TimerControl component
 import useTimer from "../../hooks/useTimer"; // Import the useTimer custom hook
+import { SettingsContext } from '../settings/SettingsContext'; // Import the SettingsContext
 
 const TimerDisplay = () => {
-  const { time, isRunning, startTimer, stopTimer, resetTimer } = useTimer(1500); // Set the initial time to 25 minutes
+  const { timer } = useContext(SettingsContext);
+  const { isRunning, startTimer, stopTimer, resetTimer } = useTimer(1500); // Set the initial time to 25 minutes
+
 
   // A function to format time to MM:SS
   const formatTime = (seconds) => {
@@ -30,12 +33,12 @@ const TimerDisplay = () => {
         <CardTitle>Timer Display</CardTitle> {/* The CardTitle component is used to style the title of the timer display */}
       </CardHeader>
       <CardContent>
-        <h2 className="text-4xl font-bold">Time remaining: {formatTime(time)}</h2> {/* The formatTime function is used to display the time in MM:SS format */}
+        <h2 className="text-4xl font-bold">Time remaining: {formatTime(timer)}</h2> {/* The formatTime function is used to display the time in MM:SS format */}
         <TimerControl
           onStart={handleStart}
           onReset={resetTimer}
           isRunning={isRunning}
-          sessionDuration={Math.floor(time / 60)} // Convert seconds to minutes
+          sessionDuration={Math.floor(timer / 60)} // Convert seconds to minutes
         />
    </CardContent>
  </Card>

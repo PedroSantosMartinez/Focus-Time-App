@@ -1,4 +1,4 @@
-import { useState, useContext, createContext } from "react"; // Import the useState, useContext, and createContext hooks from React
+import { useState, useContext, createContext, useEffect } from "react"; // Import the useState, useContext, and createContext hooks from React
 
 /* Create a new context for the settings
 It hold our settings, when it time to use these settings in a component it can look into this context
@@ -6,7 +6,7 @@ It hold our settings, when it time to use these settings in a component it can l
 const SettingsContext = createContext(null); 
 
 // Create a custom hook to use the settings context
-const SettingProvider = ({children}) => {
+const SettingsProvider = ({children}) => {
     /* Inside the settingProvider
     audio, theme, volume, and theme value is getting grab from localstorage
     if not found then use default value  
@@ -52,6 +52,6 @@ const SettingProvider = ({children}) => {
     );
 };
 
-export { SettingsContext, SettingProvider }; // Export the SettingsContext and settingProvider
+export { SettingsContext, SettingsProvider }; // Export the SettingsContext and settingProvider
 
 

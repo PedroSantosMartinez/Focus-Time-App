@@ -2,12 +2,15 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import { SettingProvider } from './components/settings/SettingsContext';
+import { SettingsProvider } from './components/settings/SettingsContext';
+import { AchievementProvider } from './components/context/AchievementContext';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <SettingProvider>
+    <SettingsProvider>
+      <AchievementProvider>
       <App />
-    </SettingProvider>
+      </AchievementProvider>
+    </SettingsProvider>
   </StrictMode>,
-)
+);

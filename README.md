@@ -1,4 +1,4 @@
-# Focus Timer
+x# Focus Timer
 
 A simple and elegant focus timer application built with React, TypeScript, and Tailwind CSS. This app helps you stay focused by providing a countdown timer with start, pause, and reset functionality.
 
