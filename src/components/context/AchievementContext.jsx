@@ -11,7 +11,7 @@ const AchievementList = [
     {id: 4, name: "Focus Addict", description: "Complete 30 focus sessions", unlocked: false, threshold: 30},
 ]
 
-// Create a custom hook to use the achievement context
+// Create the AchievementProvider component to provide the context to the children components
 const AchievementProvider = ({ children }) => {
     // Get the total finished sessions from local storage or use the default value
     const [totalFinishedSessions, setTotalFinishedSessions] = useState(() => {

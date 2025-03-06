@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useContext} from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "../common/Card"; // Import the Card, CardContent, CardHeader, and CardTitle components from the ui folder
-import TimerControl from "./TimerControl"; // Import the TimerControl component
+import TimerControl from "../timer/TimerControl"; // Import the TimerControl component
 import useTimer from "../../hooks/useTimer"; // Import the useTimer custom hook
 import { SettingsContext } from '../settings/SettingsContext'; // Import the SettingsContext
 

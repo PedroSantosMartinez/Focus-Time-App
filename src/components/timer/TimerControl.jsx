@@ -21,7 +21,7 @@ const TimerControl = ({ onStart, onReset, sessionDuration }) => {
             {/* Start/Pause button */}
             <Button
                 onClick={handleStartTimer}
-                className="mr-2 text-white"
+                className="mr-2 text-black"
             >
                 {isRunning ? "Pause Focus Session" : "Start Focus Session"} {/* Change the button text based on the isRunning state */}
             </Button>
@@ -30,7 +30,7 @@ const TimerControl = ({ onStart, onReset, sessionDuration }) => {
             <Button
                 variant="outlined"
                 onClick={onReset}   
-                className="text-white"
+                className="text-black"
             >
                 Reset
             </Button>

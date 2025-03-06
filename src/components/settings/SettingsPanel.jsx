@@ -18,8 +18,8 @@ const SettingsPanel = () => {
                 <div className="mb-4">
                     <label className="flex items-center justify-between">
                         <span>Theme:</span>
-                        <Button onClick={toggleTheme}>
-                            Switch to {theme === "blue" ? "Dark" : "Blue"} Mode
+                        <Button className="text-black" onClick={toggleTheme}>
+                            Switch to {theme === "dark" ? "Blue" : "Dark"} Mode
                         </Button>
                     </label>
                 </div>

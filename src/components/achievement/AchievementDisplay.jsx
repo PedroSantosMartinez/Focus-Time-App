@@ -28,7 +28,7 @@ const AchievementDisplay = () => {
                 </p>
               </div>
             ))}
-            <Button onClick={resetAchievements}>Reset Achievements</Button>
+            <Button className="text-black" onClick={resetAchievements}>Reset Achievements</Button>
           </CardContent>
         </Card>
       );
